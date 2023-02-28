@@ -1,4 +1,4 @@
-class ProjectController < AppController
+class SkillController < AppController
 
     set :views, './app/views'
 
@@ -8,9 +8,9 @@ class ProjectController < AppController
     end
 
     # @method: Add a new PROJECTS to the DB
-    post '/project/create' do
+    post '/skill/create' do
         begin
-            project = Project.create( self.data(create: true) )
+            project = Skill.create( self.data(create: true) )
             json_response(code: 201, data: project)
         rescue => e
             json_response(code: 422, data: { error: e.message })
@@ -18,7 +18,7 @@ class ProjectController < AppController
     end
 
     # @method: Display all proojects
-    get '/project' do
+    get '/skill' do
         projects = Project.all
         json_response(data: projects)
     end
@@ -26,33 +26,33 @@ class ProjectController < AppController
     # @view: Renders an erb file which shows all PROJECTS
     # erb has content_type because we want to override the default set above
     get '/' do
-        @projects = Project.all.map { |student|
+        @skills = Skill.all.map { |student|
           {
-            project: project,
+            skll: skill,
             badge: student_status_badge(student.status)
           }
         }
         @i = 1
-        erb_response :projects
+        erb_response :skills
     end
 
     # @method: Update existing PROJECT according to :id
-    put '/project/update/:id' do
+    put '/skill/update/:id' do
         begin
-            project = Project.find(self.project_id)
-            project.update(self.data)
-            json_response(data: { message: "todo updated successfully" })
+            skill = Skill.find(self.skill_id)
+            skill.update(self.data)
+            json_response(data: { message: "skill updated successfully" })
         rescue => e
             json_response(code: 422 ,data: { error: e.message })
         end
     end
 
     # @method: Delete PROJECT based on :id
-    delete '/project/destroy/:id' do
+    delete '/skill/destroy/:id' do
         begin
-            project = Project.find(self.project_id)
-            project.destroy
-            json_response(data: { message: "project deleted successfully" })
+            skill = Skill.find(self.skill_id)
+            skill.destroy
+            json_response(data: { message: "skill deleted successfully" })
         rescue => e
           json_response(code: 422, data: { error: e.message })
         end
@@ -71,12 +71,12 @@ class ProjectController < AppController
     end
 
     # @helper: retrieve to-do :id
-    def project_id
+    def skill_id
         params['id'].to_i
     end
 
     # @helper: format status style
-    def project_status_badge(status)
+    def skill_status_badge(status)
         case status
             when 'CREATED'
                 'bg-info'
