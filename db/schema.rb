@@ -16,13 +16,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_28_134258) do
     t.string "description"
     t.integer "user_id"
     t.datetime "createdAt"
-    t.datetime "updated_at"
+    t.datetime "updatedAt"
     t.integer "status", default: 0
   end
 
   create_table "skills", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "user_id", null: false
+    t.integer "user_id"
     t.datetime "createdAt"
     t.datetime "updatedAt"
   end
