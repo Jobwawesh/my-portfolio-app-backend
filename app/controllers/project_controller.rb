@@ -20,7 +20,7 @@ class ProjectController < AppController
     # @method: Display all proojects
     get '/project' do
         projects = Project.all
-        json_response(data: projects)
+        projects.to_json
     end
 
     # @view: Renders an erb file which shows all PROJECTS
