@@ -21,6 +21,12 @@ class UserController < AppController
     end
   end
 
+  get '/user' do
+    users = User.all
+    users.to_json
+   
+  end
+
   #@method: log in user using email and password
   post '/auth/login' do
     begin

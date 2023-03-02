@@ -19,8 +19,8 @@ class SkillController < AppController
 
     # @method: Display all proojects
     get '/skill' do
-        projects = Project.all
-        json_response(data: projects)
+        skills = Skill.all
+        json_response(data: skill)
     end
 
     # @view: Renders an erb file which shows all PROJECTS

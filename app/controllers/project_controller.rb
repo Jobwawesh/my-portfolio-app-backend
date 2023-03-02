@@ -41,7 +41,7 @@ class ProjectController < AppController
         begin
             project = Project.find(self.project_id)
             project.update(self.data)
-            json_response(data: { message: "todo updated successfully" })
+            json_response(data: { message: "project updated successfully" })
         rescue => e
             json_response(code: 422 ,data: { error: e.message })
         end
