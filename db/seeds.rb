@@ -1,3 +1,10 @@
+# Erases previous records
+puts "Deleting old data..."
+Project.destroy_all
+User.destroy_all
+Skill.destroy_all
+
+
 puts "Seeding tables..."
 
 17.times do
@@ -10,7 +17,7 @@ puts "Seeding tables..."
     )
     rand(1..6).times do
         Project.create(
-        "title": Faker::PhoneNumber.cell_phone ,
+        "title": Faker::Marketing.buzzwords ,
         "description": Faker::Lorem.sentence,
         "user_id": user.id,
         "status": rand(0..3)
