@@ -64,21 +64,20 @@ This application is a simple web API that allows users to:
 
 - Register a new account.
 - Log in to existing account.
-- Create TODO items.
-- Update individual TODO items.
-- View all TODO items.
-- Filter TODO items by date.
-- Delete a TODO item.
+- Create a PROJECT items.
+- Update individual PROJECT items.
+- View all PROJECT items.
+- Delete a PROJECT item.
 
 ### MODELS
 Database schema definitions.
 
-#### TODO
+#### PROJECT
 
 | COLUMN      | DATA TYPE                                       | DESCRIPTION                         | 
 |-------------|-------------------------------------------------|-------------------------------------|
 | id          | Integer                                         | Unique identifier.                  |
-| title       | String                                          | The name of the task.               |
+| title       | String                                          | The name of the project.               |
 | description | String                                          | A short description about the task. |
 | due         | Date                                            | The set due date for the task.      |
 | createdAt   | Date                                            | The date the task was created.      |
