@@ -117,7 +117,7 @@ Database schema definitions.
     "password": "12345678"
    }
    ```
-4. `/todos/create` - Add a new TODO item.
+4. `/projects/create` - Add a new TODO item.
 
    ```{json}
    ## REQUEST BODY
