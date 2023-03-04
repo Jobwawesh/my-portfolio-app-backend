@@ -6,11 +6,7 @@
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 # My-Todos
-My-Todos is a basic API built with ruby's Sinatra DSL. 
 
-This project is a demo that shows the power of the DSL in building server-side applications quickly.
-
-The application has been built with the MVC design pattern.
 
 ## Pre-Requisites
 In order to use this repository you will need the following:
@@ -131,7 +127,7 @@ Database schema definitions.
     "due": "2023-09-09"
    }
    ```
-5. `/todos` - List all TODO items.
+5. `/projects` - List all PROJECT items.
 
    ```{json}
    ## RESPONSE SAMPLE
@@ -141,7 +137,6 @@ Database schema definitions.
             "id": 2,
             "title": "Running another DSA practice 2",
             "description": "A wild desc",
-            "due": "2023-02-24T00:00:00.000Z",
             "createdAt": "2023-02-24T09:34:41.856Z",
             "status": "CREATED"
         }],

@@ -1,4 +1,4 @@
-# Erases previous records
+# Erasing previous records
 puts "Deleting old data..."
 Project.destroy_all
 User.destroy_all
