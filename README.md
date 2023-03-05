@@ -4,6 +4,14 @@
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 # My-Portfolio-App
+Welcome to my-porfolio app. <br>
+This is  an app that allows you to add projects that one is working oon and beable to see other peoples' projects at the same time.
+This being a backend repository, it contains all the data for the app.<br>
+To try out the fully functioning app, got to:<br>
+         (https://github.com/Jobwawesh/my-portfolio-app-frontend)
+
+
+
 
 ## Entity Relationship Diagram(ERD)
 This ERD is here to demonstrate the relationship between this project's entities.
