@@ -30,7 +30,10 @@ puts "Seeding tables..."
     #         "user_id": user.id
     #     )
     # end
-    puts "Creating skills"
+
+end
+
+puts "Creating skills"
     skill1 = Skill.create(name: "React")
     skill2 = Skill.create(name: "Ruby")
     skill3 = Skill.create(name: "JavaScript")
@@ -38,10 +41,5 @@ puts "Seeding tables..."
     skill5 = Skill.create(name: "Python")
     skill6 = Skill.create(name: "Vue")
 
-
-
-
-
-end
 
 puts "Done seeding"
