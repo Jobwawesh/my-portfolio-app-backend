@@ -7,7 +7,7 @@ Skill.destroy_all
 
 puts "Seeding tables..."
 
-10.times do
+# 10.times do
 
     user = User.create(
         "name": Faker::Name.name,
@@ -30,6 +30,6 @@ puts "Seeding tables..."
             "user_id": user.id
         )
     end
-end
+# end
 
 puts "Done seeding"
