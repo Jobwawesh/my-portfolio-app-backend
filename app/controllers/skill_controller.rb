@@ -20,7 +20,7 @@ class SkillController < AppController
     # @method: Display all skills from user with a limit of 10
     get '/skill' do
         skills = Skill.all
-        skills.limit(10)to_json
+        skills.limit(10).to_json
     end
 
     # @view: Renders an erb file which shows all PROJECTS
