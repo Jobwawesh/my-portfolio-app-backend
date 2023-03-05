@@ -8,7 +8,7 @@
 ## Entity Relationship Diagram(ERD)
 This ERD is here to demonstrate the relationship between this project's entities.
 
-<img src="images/ERD.png" width="1000">
+<img src="images/project-erd.png" width="1000">
 
 ## Pre-Requisites
 In order to use this repository you will need the following:
