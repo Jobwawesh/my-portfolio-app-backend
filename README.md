@@ -3,7 +3,7 @@
 [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-# My-Todos
+# My-Portfolio-App
 
 ## Entity Relationship Diagram(ERD)
 This ERD is here to demonstrate the relationship between this project's entities.
