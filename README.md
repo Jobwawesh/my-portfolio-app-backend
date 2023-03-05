@@ -75,8 +75,8 @@ This application is a simple web API that allows users to:
 - Register a new account.
 - Log in to existing account.
 - Create a PROJECT items.
-- Update individual PROJECT items.
 - View all PROJECT items.
+- Update a PROJECT Item
 - Delete a PROJECT item.
 
 ### MODELS
@@ -84,14 +84,22 @@ Database schema definitions.
 
 #### PROJECT
 
-| COLUMN      | DATA TYPE                                       | DESCRIPTION                         | 
-|-------------|-------------------------------------------------|-------------------------------------|
-| id          | Integer                                         | Unique identifier.                  |
+| COLUMN      | DATA TYPE                                       | DESCRIPTION                            | 
+|-------------|-------------------------------------------------|----------------------------------------|
+| id          | Integer                                         | Unique identifier.                     |
 | title       | String                                          | The name of the project.               |
 | description | String                                          | A short description about the project. |
-| due         | Date                                            | The set due date for the task.      |
-| createdAt   | Date                                            | The date the task was created.      |
-| status      | ENUM `[CREATED, ONGOING, COMPLETED, CANCELLED]` | TThe status of the task.            |
+| due         | Date                                            | The set due date for the project.      |
+| createdAt   | Date                                            | The date the task was created.         |
+| status      | ENUM `[CREATED, ONGOING, COMPLETED, CANCELLED]` | TThe status of the task.               |
+
+
+### SKILL
+| COLUMN        | DATA TYPE | DESCRIPTION                           | 
+|---------------|-----------|---------------------------------------|
+| id            | Integer   | Unique identifier.                    |
+| name          | String    | User's full name.                     |
+| createdAt     | Date      | The date the skill was created.       |
 
 
 #### USER
@@ -102,6 +110,8 @@ Database schema definitions.
 | password_hash | String    | User's password hashed with `BCrypt`. |
 | updated_at    | Date      | The date the user was updated.        |
 | createdAt     | Date      | The date the user was created.        |
+
+
 
 
 ### ROUTES
@@ -153,6 +163,33 @@ Database schema definitions.
    ```
 6. `/project/update/:id` - Update an existing PROJECT.
 7. `/project/delete/:id` - Delete a PROJECT item.
+
+8. `/skill/create` - Add a new SKILL item.
+
+   ```{json}
+   ## REQUEST BODY
+   {
+    "name": "a sample",
+   }
+   ```
+9. `/skill` - List all SKILL items.
+
+   ```{json}
+   ## RESPONSE SAMPLE
+   {
+    "data": [
+        {
+            "id": 2,
+            "title": "Yet another sample 2",
+            "createdAt": "2023-02-24T09:34:41.856Z",
+            "status": "CREATED"
+        }],
+    "message": "SUCCESS"
+   }
+   ```
+10. `/skill/update/:id` - Update an existing SKILL.
+11. `/skill/delete/:id` - Delete a SKILL item.
+
 
 ## LICENSE
 Mozilla Public License Version 2.0
