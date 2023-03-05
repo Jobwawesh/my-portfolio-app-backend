@@ -1,8 +1,8 @@
 # Erasing previous records
-puts "Deleting old data..."
-Project.destroy_all
-User.destroy_all
-Skill.destroy_all
+# puts "Deleting old data..."
+# Project.destroy_all
+# User.destroy_all
+# Skill.destroy_all
 
 
 puts "Seeding tables..."
