@@ -7,7 +7,7 @@ Skill.destroy_all
 
 puts "Seeding tables..."
 
-17.times do
+10.times do
 
     user = User.create(
         "name": Faker::Name.name,
