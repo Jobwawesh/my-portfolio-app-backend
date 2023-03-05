@@ -17,10 +17,10 @@ class SkillController < AppController
         end
     end
 
-    # @method: Display all proojects
+    # @method: Display all skills from user with a limit of 10
     get '/skill' do
         skills = Skill.all
-        skills.to_json
+        skills.limit(10)to_json
     end
 
     # @view: Renders an erb file which shows all PROJECTS
@@ -36,7 +36,7 @@ class SkillController < AppController
         erb_response :skills
     end
 
-    # @method: Update existing PROJECT according to :id
+    # @method: Update existing Skill according to :id
     put '/skill/update/:id' do
         begin
             skill = Skill.find(self.skill_id)
@@ -47,7 +47,7 @@ class SkillController < AppController
         end
     end
 
-    # @method: Delete PROJECT based on :id
+    # @method: Delete SKILL based on :id
     delete '/skill/destroy/:id' do
         begin
             skill = Skill.find(self.skill_id)
