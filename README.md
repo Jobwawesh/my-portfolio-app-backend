@@ -167,4 +167,4 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMA
 ## Author
 This repository is maintained by:
 
-- [Ian Okumu](https://github.com/otsembo) 
+- [Job Waweru](https://github.com/Jobwawesh) 
