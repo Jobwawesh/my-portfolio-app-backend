@@ -24,12 +24,24 @@ puts "Seeding tables..."
     )
     end
 
-    rand(1..5).times do
-        Skill.create(
-            "name": Faker::Job.key_skill, 
-            "user_id": user.id
-        )
-    end
+    # rand(1..5).times do
+    #     Skill.create(
+    #         "name": Faker::Job.key_skill, 
+    #         "user_id": user.id
+    #     )
+    # end
+    puts "Creating skills"
+    skill1 = Skill.create(name: "React")
+    skill2 = Skill.create(name: "Ruby")
+    skill3 = Skill.create(name: "JavaScript")
+    skill4 = Skill.create(name: "SQLs")
+    skill5 = Skill.create(name: "Python")
+    skill6 = Skill.create(name: "Vue")
+
+
+
+
+
 end
 
 puts "Done seeding"
