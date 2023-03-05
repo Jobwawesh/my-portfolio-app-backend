@@ -1,12 +1,14 @@
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://gitHub.com/otsembo/my-todos-sinatra/graphs/commit-activity)
-[![GitHub forks](https://img.shields.io/github/forks/otsembo/my-todos-sinatra.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/otsembo/my-todos-sinatra/network/)
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/otsembo/my-todos-sinatra/blob/master/LICENSE)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Jobwawesh/my-portfolio-app-backend/graphs/commit-activity)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 # My-Todos
 
+## Entity Relationship Diagram(ERD)
+This ERD is here to demonstrate the relationship between this project's entities.
+
+<img src="images/ERD.png" width="1000">
 
 ## Pre-Requisites
 In order to use this repository you will need the following:
@@ -40,7 +42,7 @@ You can setup this repository by following this manual
 
 1. Clone the repository
     ```{shell}
-   git clone https://github.com/otsembo/my-todos-sinatra.git
+   git clone https://github.com/Jobwawesh/my-portfolio-app-backend
    ```
 2. Ensure the ruby gems are setup in your machine
     ```{shell}
@@ -78,7 +80,7 @@ Database schema definitions.
 |-------------|-------------------------------------------------|-------------------------------------|
 | id          | Integer                                         | Unique identifier.                  |
 | title       | String                                          | The name of the project.               |
-| description | String                                          | A short description about the task. |
+| description | String                                          | A short description about the project. |
 | due         | Date                                            | The set due date for the task.      |
 | createdAt   | Date                                            | The date the task was created.      |
 | status      | ENUM `[CREATED, ONGOING, COMPLETED, CANCELLED]` | TThe status of the task.            |
@@ -116,14 +118,13 @@ Database schema definitions.
     "password": "12345678"
    }
    ```
-4. `/projects/create` - Add a new TODO item.
+4. `/projects/create` - Add a new PROJECT item.
 
    ```{json}
    ## REQUEST BODY
    {
-    "title": "Make Breakfast",
-    "description": "Prepare milk and cereal",
-    "due": "2023-09-09"
+    "title": "a sample",
+    "description": "This is a sample project",
    }
    ```
 5. `/projects` - List all PROJECT items.
@@ -134,35 +135,19 @@ Database schema definitions.
     "data": [
         {
             "id": 2,
-            "title": "Running another DSA practice 2",
-            "description": "A wild desc",
+            "title": "Yet another sample 2",
+            "description": "Just a project description sample",
             "createdAt": "2023-02-24T09:34:41.856Z",
             "status": "CREATED"
         }],
     "message": "SUCCESS"
    }
    ```
-6. `/todos/update/:id` - Update an existing TODO.
-7. `/todos/delete/:id` - Delete a TODO item.
-8. `/` - Render a table of all todos using Bootstrap and ERB
-
-![Todo Table](screens/todo_table.png)
+6. `/project/update/:id` - Update an existing PROJECT.
+7. `/project/delete/:id` - Delete a PROJECT item.
 
 ## LICENSE
-This repository is distributed under the MIT License
-
-```markdown
-Copyright 2023 Ian Okumu
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), 
-to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, 
-and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-```
+Mozilla Public License Version 2.0
 
 ## Author
 This repository is maintained by:
