@@ -78,6 +78,8 @@ This application is a simple web API that allows users to:
 - View all PROJECT items.
 - Update a PROJECT Item
 - Delete a PROJECT item.
+- Create a SKILL
+- Delete a SKILL
 
 ### MODELS
 Database schema definitions.

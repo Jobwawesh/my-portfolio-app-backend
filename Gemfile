@@ -25,6 +25,11 @@ group :development do
     gem 'faker'
 end
 
+group :production do
+    gem 'rerun', '~> 0.14.0'
+    gem 'faker'
+end
+
 group :test do
     gem 'rack-test', '~> 2.0', '>= 2.0.2'
     gem 'rspec', '~> 3.12'
