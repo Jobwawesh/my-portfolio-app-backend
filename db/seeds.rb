@@ -1,8 +1,8 @@
 # Erasing previous records
-# puts "Deleting old data..."
-# Project.destroy_all
-# User.destroy_all
-# Skill.destroy_all
+puts "Deleting old data..."
+Project.destroy_all
+User.destroy_all
+Skill.destroy_all
 
 
 puts "Seeding tables..."
@@ -39,7 +39,5 @@ puts "Creating skills"
     skill3 = Skill.create(name: "JavaScript")
     skill4 = Skill.create(name: "SQLs")
     skill5 = Skill.create(name: "Python")
-    skill6 = Skill.create(name: "Vue")
-
 
 puts "Done seeding"
